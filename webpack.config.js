@@ -14,7 +14,11 @@ module.exports = {
     filename: "[name].js"
   },
   devServer: {
+    disableHostCheck: true,   // That solved it
+    compress: true,
     contentBase: dist,
+    port: '8080',
+    host: '0.0.0.0',
   },
   plugins: [
     new CopyPlugin([
